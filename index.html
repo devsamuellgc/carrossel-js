@@ -3,29 +3,72 @@
 
 <head>
     <title>Carousel Example</title>
+    <link href="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+    " rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
+    <h2>Carrossel Chat GPT</h2>
     <div class="carousel">
         <div class="carousel-content">
             <div class="carousel-item">
-                <img src="https://s2.glbimg.com/1C2ctoQsZEFhm9ziFaMVJJ2WIdA=/e.glbimg.com/og/ed/f/original/2022/07/26/ben-michel-uyn3kxaazx8-unsplash.jpg" alt="">
+                <img src="https://s2.glbimg.com/1C2ctoQsZEFhm9ziFaMVJJ2WIdA=/e.glbimg.com/og/ed/f/original/2022/07/26/ben-michel-uyn3kxaazx8-unsplash.jpg"
+                    alt="">
             </div>
             <div class="carousel-item">
-                <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/01-domesticated-dog.jpg?w=710&h=474" alt="">
+                <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/01-domesticated-dog.jpg?w=710&h=474"
+                    alt="">
             </div>
             <div class="carousel-item">
-                <img src="https://uploads.metropoles.com/wp-content/uploads/2021/06/09110407/cachorro-fofo-usando-oculos_23-2148917262-1.jpg" alt="">
+                <img src="https://uploads.metropoles.com/wp-content/uploads/2021/06/09110407/cachorro-fofo-usando-oculos_23-2148917262-1.jpg"
+                    alt="">
             </div>
         </div>
         <div class="carousel-controls">
             <button class="carousel-prev">Anterior</button>
             <button class="carousel-next">Próximo</button>
-          </div>
+        </div>
     </div>
 
+    <h2>Carrossel Splide.js</h2>
+    <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <img src="https://s2.glbimg.com/1C2ctoQsZEFhm9ziFaMVJJ2WIdA=/e.glbimg.com/og/ed/f/original/2022/07/26/ben-michel-uyn3kxaazx8-unsplash.jpg"
+                        alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/01-domesticated-dog.jpg?w=710&h=474"
+                        alt="">
+                </li>
+                <li class="splide__slide">
+                    <img src="https://uploads.metropoles.com/wp-content/uploads/2021/06/09110407/cachorro-fofo-usando-oculos_23-2148917262-1.jpg"
+                        alt="">
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+    "></script>
     <script src="./assets/js/index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide = new Splide('.splide', {
+                type: 'loop',
+                perPage: 1,
+                height: '20rem',
+                width: '500px',
+                cover: true,
+                heightRatio: 0.5
+            });
+            splide.mount();
+        });
+    </script>
 </body>
 
 </html>
